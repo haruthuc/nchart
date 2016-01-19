@@ -1,8 +1,7 @@
-nchart
+chartjs-custom
 ======
 
-nchart for node.js inspired by [Chart.js][].  
-**NOTE**: nchart currently just imports Chart.js(**v1.x**) and it's hacked for node.
+The fork version of [nChart]
 
 ## Usage
 
@@ -10,34 +9,37 @@ nchart for node.js inspired by [Chart.js][].
 var Canvas = require('canvas')
   , canvas = new Canvas(800, 800)
   , ctx = canvas.getContext('2d')
-  , Chart = require('nchart')
+  , Chart = require('nchart-custom')
   , fs = require('fs');
-
-new Chart(ctx).Pie(
+ 
+new Chart(ctx).Doughnut(
     [
         {
-            "value": 50
-          , "color": "#E2EAE9"
-        }
-      , {
-            "value": 100
-          , "color": "#D4CCC5"
-        }
-      , {
-            "value": 40
-          , "color": "#949FB1"
+            "value": 50,
+            "color": "#27ae60",
+          "showCenterText":true,
+          "showCenterLabel":true,
+          "label":"Compliance"
+        },
+        {
+            "value": 100,
+            "color": "#D4CCC5",
+            "label":"Non-compliance",
+            "color": "#F7464A"
         }
     ]
   , {
-        scaleShowValues: true
-      , scaleFontSize: 24
+        scaleShowValues: true,
+        percentageInnerCutout : 75,
+         scaleFontSize: 24
     }
 );
-
+ 
 canvas.toBuffer(function (err, buf) {
   if (err) throw err;
-  fs.writeFile(__dirname + '/pie.png', buf);
+  fs.writeFile(__dirname + '/pie2.png', buf);
 });
+
 ```
 ## Installation
 

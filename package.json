@@ -1,8 +1,8 @@
 {
-  "name": "nchart",
+  "name": "chartjs-custom",
   "version": "1.0.1",
-  "description": "nChart for node.js inspired by Chart.js.",
-  "author": "FangDun Cai <cfddream@gmail.com>",
+  "description": "nodejs Chart of Chart.js with private custom. Support show text in Doughnut chart",
+  "author": "Thuc Huynh <haruthuc@gmail.com>",
   "license": "MIT",
   "keywords": [
     "chart",
@@ -15,7 +15,7 @@
   "scripts": {
     "test": "make test"
   },
-  "repository": "cfddream/nchart.git",
+  "repository": "haruthuc/nchart.git",
   "devDependencies": {
     "canvas": "1.x",
     "mocha": "2.x",
