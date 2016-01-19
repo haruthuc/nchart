@@ -1,7 +1,7 @@
 var Canvas = require('canvas')
   , canvas = new Canvas(800, 800)
   , ctx = canvas.getContext('2d')
-  , Chart = require('nchart-custom')
+  , Chart = require('chartjs-custom')
   , fs = require('fs');
  
 new Chart(ctx).Doughnut(

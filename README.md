@@ -43,7 +43,7 @@ canvas.toBuffer(function (err, buf) {
 ```
 ## Installation
 
-    $ npm install -g nchart
+    $ npm install -g chartjs-custom
 
 ## Required!
 
