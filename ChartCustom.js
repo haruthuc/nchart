@@ -16,7 +16,6 @@
 	//Declare root variable - window in the browser, global on the server
 	var root = this,
 		previous = root.Chart;
-
 	//Occupy the global variable of Chart, and create a simple base class
 	var Chart = function(context){
 		var chart = this;
@@ -2659,7 +2658,7 @@
 				this.chart.ctx.textBaseline = 'middle'; 
 				this.chart.ctx.font = helpers.fontString(this.options.fontSizeCenterText,'bold',this.options.scaleFontFamily);
 				if(percentageNumber > 0)
-					percentageNumber = Math.round(percentageNumber / totalValue)*100;
+					percentageNumber = Math.round((percentageNumber/totalValue)*100,-2);
 				percentageNumber += "%";
 				this.chart.ctx.fillStyle = textColor;
 				this.chart.ctx.fillText(percentageNumber,this.chart.width/2,this.chart.height/2);
